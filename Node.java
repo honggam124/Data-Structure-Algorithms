@@ -1,30 +1,31 @@
-public class Node <E> {
-    private E data;
-    private Node <E> next;
-    
-    public Node(){
-        data = null;
-        next = null;
-    }
+class Node<E> {
+	private E element;
+	private Node<E> next;
 
-    public Node(E data){
-        this(data, null);
-    }
+	public Node() {
+		this.element = null;
+		this.next = null;
+	}
 
-    public Node(E data, Node <E> next){
-        this.data = data;
-        this.next = next;
-    }
+	public Node(E data) {
+		this.element = data;
+		this.next = null;
+	}
 
-    public Node <E> getNext(){
-        return next;
-    }
+	public Node(E data, Node<E> next) {
+		this.element = data;
+		this.next = next;
+	}
 
-    public E getData(){
-        return data;
-    }
+	public E getData() {
+		return this.element;
+	}
 
-    public void setNext(Node <E> n){
-        next = n;
-    }
+	public Node<E> getNext() {
+		return this.next;
+	}
+
+	public void setNext(Node<E> next) {
+		this.next = next;
+	}
 }
